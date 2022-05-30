@@ -1,0 +1,70 @@
+gGit: sistema de controle de versões distribuído.  estes sistemas de controle possuem a função de registrar quaisquer alterações feitas em cima de um código, armazenando essas informações e permitindo que, caso seja necessário, um(a) programador(a) possa regredir a versões anteriores de uma aplicação de modo simples e rápido.
+mkdir: cria repositório;
+del/rmdir: primeiro caso remove somente o que está dentro do repositório enquanto no segundo deleta todo o repositório;
+echo: devolve o que foi digitado no terminal;
+echo hello > hello.txt: joga a saída dentro de um arquivo txt
+
+GIT - funcionamento:
+sha1: secure hash algorith (algoritmo de hash seguro). conjunto de funções hash criptográficas. ele embaralha determinado arquivo, imagem ou texto para que seja gerado um conjunto de caracteres identificadores que possuem 40 dígitos.
+openssl sha1 arquivo.txt: passando arquivo para algoritmo de encriptação.
+
+GIT - objetos internos: blobs, tree e commit.
+Chaves SSH: estabelecer conexão segura com duas chaves com o github.
+
+
+Comandos básicos:
+a) git init: inicia repositório do git; inicia e começa a versionar o código;
+b) git add: move arquivos dando início ao versionamento;
+c) git commit: cria commit;
+
+Sintaxe: git + comando específico do git;
+
+Criando chave SSH:
+ssh-keygen -t ed25519 -C "jhenrique.tads@gmail.com" 
+Verificando conteúdo de chave(antes deve listar a chave (ls)):
+cat id_ed25519.pub
+Iniciando o agente para rodar em plano de fundo:
+eval $(ssh-agent -s)
+
+No github é passado a chave pública enquanto no agente utiliza-se chave privada. Significa que toda vez que chegar uma chave criptografada será utilizada a chave privada para realizar decriptar, e é esse o papel do agente. Verificar esses movimentos.
+
+Clonando projeto do github:
+git clone + caminho do ssh no gihthub.
+
+mostrar arquivos ocultos: ls -a
+
+Configuração GIT
+git config --global user.email "jhenrique.tads@gmail.com"
+git config --global user.name Henrique
+
+GIT - INIT: Cria um novo repositório GIT. Ele pode ser usado para converter um projeto existente e não versionado em um repositório do Git ou inicializar um novo repositório vazio. A maioria dos outros comandos Git não está disponível fora de um repositório inicializado, portanto, este costuma ser o primeiro comando que você executa em um novo projeto. A execução do git init cria um subdiretório .git no diretório de trabalho atual, que contém todos os metadados Git necessários para o novo repositório. Esses metadados incluem subdiretórios para objetos, referências e arquivos de template. Também é criado um arquivo HEAD que aponta para o commit em uso no momento. 
+
+
+UNTRACKED: O git não sabe da existência do arquivo. Arquivos que não estão marcados para envio
+TRACKED: git ciente da existência do arquivo.
+
+
+
+
+
+
+
+
+Git - Ciclo de vida
+
+
+GIT - STATUS: mostra o estado do arquivo, ou seja, se está untracked, modified;
+Mover arquivo para outro repositório: mv arquivo.md ./ outro_repositório/
+mv bolo.md ./receitas/
+Adicionando arquivos para stage: git add nome_do_arquivo;
+Criando commit: git commit - m “Cria pasta receitas, move arquivos para receitas”
+Git - ADD: arquivos para área de stage;
+Git - Comit -m: movemos para repositório local;
+Git remote -v: lista os repositórios cadastrados;
+
+Conflito de merge: duas alterações na mesma linha.
+
+1 - Inicializa o repositório com git init.
+2 - Antes de criar um arquivo é necessário realizar uma configuração global.
+git config –global user.email “jhenrique.tads@gmail.com”
+3 - git add *
