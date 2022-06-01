@@ -1,5 +1,8 @@
 body{
     background: #f7f7f7;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 900px;
+    margin: auto;
 }
 .photo{
     border: 1px solid #505050;
@@ -9,6 +12,17 @@ body{
 #title, .subtitle, .post_title{
     color: #505050;
 }
+
+#title{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+a{
+    text-decoration: line-through;
+    color: #505050;
+}
+
 .post_title{
     font-size: 16px;
     font-style: italic;
@@ -27,8 +41,21 @@ body{
 .post_content{
     margin: 0;
     margin-bottom: 15px;
+    text-transform: capitalize;
+    text-align: justify;
 }
 
 .post_image{
     margin-bottom: 15px;
+    width: 100%;
+}
+
+.contacts_list{
+    list-style-type: none;
+    padding-left: 15px;
+
+}
+
+.contacts_list li a{
+    text-decoration: none;
 }
