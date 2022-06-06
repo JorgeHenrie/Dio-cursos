@@ -282,3 +282,50 @@ a:hover{   /* é usado para selecionar elementos quando você passa o mouse sobr
     visibility: visible;
 }
 
+/* FOOTER */
+
+.footer{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2e1c2b;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+    .social-media{
+        display: flex;
+        flex-direction: column;
+    }
+    .containter{
+        margin: 0;
+    }
+    .card-container{
+        flex-direction: column;
+    }
+
+    .containter .card-container:nth-child(1),
+    .containter .card-container:nth-child(2){
+        flex-direction: column-reverse;
+    }
+
+    .card{
+        height: 250px;
+        width: 250px;
+    }
+
+    .card-text{
+        width: 90%;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .card:hover > .card-wrapper::before{
+        height: 190px;
+        width: 190px;
+    }
+}
