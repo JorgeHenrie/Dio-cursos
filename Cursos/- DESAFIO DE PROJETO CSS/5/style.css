@@ -118,7 +118,7 @@ a:hover{   /* é usado para selecionar elementos quando você passa o mouse sobr
     border-radius: 50%;
     box-shadow: 0px 0px 0px 0px #ffff; /* é utilizado para adicionar efeitos de sombra em volta de um elemento. */
     z-index: -1;
-    transition: 400ms ease-in-out 0;
+    transition: 400ms ease-in-out 0s;
 }
 
 .menu-items{
@@ -139,8 +139,6 @@ a:hover{   /* é usado para selecionar elementos quando você passa o mouse sobr
 .menu-items ul{
     list-style-type: none;
 }
-
-
 
 .menu-items ul li{
     margin: 10px 0;
@@ -185,3 +183,102 @@ a:hover{   /* é usado para selecionar elementos quando você passa o mouse sobr
     visibility: visible;
     opacity: 1;
 } 
+
+
+
+/* DIV: é um container genérico para conteúdo de fluxo, que de certa forma não representa nada. Ele pode ser utilizado para agrupar elementos para fins de estilos (usando class ou id). */
+/* NAV: representa uma seção de uma página que aponta para outras páginas ou para outras áreas da página, ou seja, uma seção com links de navegação. */
+
+.containter{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: none; /* define como os itens flexíveis são colocados no contêiner flexível */
+    justify-content: space-between; /* SPACE-BETWEEN: os itens terão espaço entre eles. */
+    align-items: center;
+    margin: 3rem 0;
+}
+
+.card-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;   /* justify content: alinhamento ao longo do eixo principal. Ajuda a distribuir o espaço livre extra restante.
+    FLEX-START: distribui no início do eixo (container). FLEX-END: distribui no final do eixo (container).
+    SPACE-EVENLY: Os itens terão espaço igual ao redor deles */
+    width: 90%;
+}
+
+.card{
+    height: 300px;
+    width: 400px;
+    margin: 3rem 0 0;
+    background-image: url('./room.jpg');
+    background-position: center;
+    background-repeat: no-repeat; /* define como as imagens de fundo são repetidas. */
+    background-size: cover;  /* especifica o tamanho das imagens de fundo. Ajusta a imagem o mais largamente possível e mantém sua proporção */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(1px 1px 5px green) invert(0.3%);
+    /* filter: grayscale(0.5);  modifica a imagem adicionada para as cores branco e preto. */
+    color: #ffff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-text{
+    width: 40%;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    color: rgb(109, 109, 109);
+}
+
+.card-wrapper{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card-wrapper::before{  /* insere algo antes do conteúdo de cada elemento(s) selecionado(s). */
+    content: '' ;   /* é usada com os pseudoelementos ::before e ::after , para inserir o conteúdo gerado. */
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: block; /* gera uma caixa de elemento de bloco */
+    border: 1px solid #ffff;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card-wrapper h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+    transition: 0.3s;
+}
+
+.card-wrapper p{
+    font-size: 0;
+    visibility: hidden; /* deixa de mostrar o elemento, ou seja, ele deixa de ser visível na página mas seu espaço continua ocupado, ou seja, o layout da página não é alterado por causa disto. */
+    opacity: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.card:hover > .card-wrapper::before{   /*  é usado para selecionar elementos quando você passa o mouse sobre eles. */
+    opacity: 1;
+    width: 350px;
+    height: 250px;
+}
+
+.card:hover > .card-wrapper p{
+    font-size: 14px;
+    opacity: 1;
+    visibility: visible;
+}
+
