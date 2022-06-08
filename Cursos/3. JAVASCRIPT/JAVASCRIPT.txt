@@ -1,0 +1,64 @@
+https://docs.google.com/presentation/d/13o3hIKjqcnl8ZYNn3QhVQXlDHrFuX27f/edit#slide=id.p2
+
+https://drive.google.com/file/d/13lpV1BvcbScdyRy_n9_VCZpOkgyAVAD4/view
+https://drive.google.com/file/d/1WOfx5PNv6I4edI6XsNhW8KyKLvbbQ1ns/view
+
+# BOAS PRÁTICAS:
+
+- EXTERNAR ARQUIVO SCRIPT;
+- CARREGAR O SCRIPT AO FINAL DO BODY;
+
+# TIPAGEM:
+
+- A tipagem no JS é fraca, ou seja, se vc declara "var num = 1"  o js já entende como number.
+
+# COMANDOS: typeof(variável): exibe o tipo de determinada variável.
+
+variável: é um espaço na memória do computador destinado a um dado que é alterado durante a execução do algoritmo
+
+var: escopo global e local, podendo ter seu valor alterado, e se não for declarado inicia-se como null;
+let: escopo local; se não iniciada terá valor null.
+const: escopo local, valor não alterado.
+
+Escopo globoal: visível em todo o código;
+escopo local: pode ficar disponível ou não;
+
+comparação idêntica -> ===
+
+### ARRAY ###
+
+Array: arrays são um tipo de lista, ou matriz de variáveis, onde cada variável possui um índice. Os valores podem ser de vários tipos.
+
+Declaração:
+let array = ['string', 1, true, false, [‘array1], [‘array2’]...];
+
+Acessando por índice:
+console.log(array[0]);
+
+
+### OBJETOS ### 
+
+Dados que possuem propriedades e valores que definem suas características. Deve ser declarado entre chaves “{}”.
+
+var xicara = {
+cor: ‘azul’,
+tamanho: ‘p’,
+funcao: tomarCafe()
+}
+
+### DECLARAÇÃO SWITCH CASE ###
+
+switch (${expressao}) {
+case 1:
+${instrucao};
+break;
+case 2:
+${instrução};
+break;
+}
+
+
+### DECLARAÇÃO FOR ###
+
+for (let i = 0; i < array.length; i++) {
+console.log(i);
