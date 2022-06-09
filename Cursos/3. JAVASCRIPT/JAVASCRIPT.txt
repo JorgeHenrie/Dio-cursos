@@ -62,3 +62,15 @@ break;
 
 for (let i = 0; i < array.length; i++) {
 console.log(i);
+
+
+
+### OPERADORES ###
+
+HOISTING: ATRIBUI VALOR A UMA VARIÁVEL ANTES DE DECLARÁ-LA; -> VAR
+REDECLARAÇÃO: VAR
+REATRIBUIÇÃO: LET/VAR
+
+-- AS VARIAVEIS SÃO USADAS UTILIZANDO camelCase
+
+javascript: tipagem dinamica.
