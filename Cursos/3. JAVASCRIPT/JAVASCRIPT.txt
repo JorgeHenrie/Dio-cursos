@@ -74,3 +74,9 @@ REATRIBUIÇÃO: LET/VAR
 -- AS VARIAVEIS SÃO USADAS UTILIZANDO camelCase
 
 javascript: tipagem dinamica.
+
+
+### STRING ###
+
+- o string.split se não passado nada como parâmetro separa todas as letras de uma palavra
+reverse: 
