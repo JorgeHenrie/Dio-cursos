@@ -1,0 +1,10 @@
+.textbanner-shape{
+display: none;
+
+}
+.textbanner-text {
+color: #36393d00;
+background-color: #000000;
+opacity: 0;
+}
+.
